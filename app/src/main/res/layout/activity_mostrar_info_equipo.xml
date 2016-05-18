@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="40dp"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="pe.edu.ulima.pc_1_mt.infoEquipo.MostrarInfoEquipoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/soccer"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/soccer"/>
+
+            <TextView
+                android:id="@+id/tviNombreEquip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Equipo 1"
+                android:layout_toRightOf="@id/soccer"
+                android:textSize="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#000000"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <ImageView
+            android:id="@+id/iviFotoEquipo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/alumno_fake"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/tviPg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Partidos Ganados:"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/tviNumPartGanados"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:layout_marginLeft="10dp"
+                android:textColor="#000000"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tviPp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Partidos Perdidos:"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/tviNumPartPerdidos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:layout_marginLeft="10dp"
+                android:textColor="#000000"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
