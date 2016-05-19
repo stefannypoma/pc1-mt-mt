@@ -19,5 +19,5 @@ public interface AlumnosService {
     Call<Message> login(@Body Alumno alumno);
 
     @POST("equipos/{id}/{codigo_alumno}")
-    Call<Message> agregarIntegrante(@Body Equipo equipo, @Body Integrante integrante);
+    Call<Message> agregarIntegrante(@Body Equipo equipo, @Body Alumno alumno);
 }
