@@ -1,0 +1,36 @@
+public class AgregarAlumnoPresenterRemote implements AgregarAlumnoPresenter {
+
+LoginView lview;
+
+    public LoginPresenterRemote (LoginView view) {this.lview = view;}
+
+    @Override
+    public void agregarIntegrante(Equipo equipo, Alumno alumno) {
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://1-dot-pichangers-1307.appspot.com/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        AlumnosService service = retrofit.create(AlumnosService.class);
+        service.agregarIntegrante(equipo, alumno).enqueue(new Callback<Message>() {
+            @Override
+            public void onResponse(Call<Message> call, Response<Message> response) {
+                if((response.body().getMsg()).equals("OK")){
+                    lview.check();
+
+                } else {
+                    lview.fail(response.body().getMsg());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Message> call, Throwable t) {
+
+            }
+        });
+
+    }
+
+
+}
