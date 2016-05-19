@@ -18,4 +18,6 @@ public interface AlumnosService {
     @POST("rest/alumnos/login")
     Call<Message> login(@Body Alumno alumno);
 
+    @POST("equipos/{id}/{codigo_alumno}")
+    Call<Message> agregarIntegrante(@Body Equipo equipo, @Body Integrante integrante);
 }
