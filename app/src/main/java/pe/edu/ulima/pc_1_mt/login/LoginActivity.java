@@ -49,7 +49,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         Alumno alumno = new Alumno();
         alumno.setCodigo(eteUsuario.getText().toString());
-        alumno.setContraseña(etePassword.getText().toString());
+        //alumno.setContraseña(etePassword.getText().toString());
+        alumno.setContraseña("123");
 
         mPresenter.obtenerLogin(alumno);
 

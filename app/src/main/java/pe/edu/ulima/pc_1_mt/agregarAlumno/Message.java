@@ -1,3 +1,5 @@
+package pe.edu.ulima.pc_1_mt.agregarAlumno;
+
 public class Message {
 
     private String msg;

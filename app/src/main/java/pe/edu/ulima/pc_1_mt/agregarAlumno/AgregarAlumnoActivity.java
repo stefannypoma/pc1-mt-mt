@@ -5,7 +5,9 @@ import android.os.Bundle;
 
 import pe.edu.ulima.pc_1_mt.R;
 
-public class AgregarAlumnoActivity extends AppCompatActivity {
+public class AgregarAlumnoActivity extends AppCompatActivity implements AgregarAlumnoView{
+
+    AgregarAlumnoPresenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -13,6 +15,21 @@ public class AgregarAlumnoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_agregar_alumno);
 
 
+
+    }
+
+    @Override
+    public void setPresenter(AgregarAlumnoPresenter presenter) {
+        this.presenter = presenter;
+    }
+
+    @Override
+    public void check() {
+
+    }
+
+    @Override
+    public void fail(String sms) {
 
     }
 }

@@ -24,7 +24,7 @@ public class LoginPresenterRemote implements LoginPresenter {
     public void obtenerLogin(Alumno alumno) {
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://1-dot-pichangers-1307.appspot.com/")
+                .baseUrl("http://pichangers-api.mybluemix.net/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
